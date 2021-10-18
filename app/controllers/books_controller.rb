@@ -8,11 +8,12 @@ class BooksController < ApplicationController
   end
   
   def new
-    @book = current_user.books.build  
+    @book = current_user.books.build
   end
 
   def create
     @book = current_user.books.build(book_params)
+
     if @book.save
       redirect_to root_path
     else
@@ -39,7 +40,7 @@ class BooksController < ApplicationController
   private
     
     def book_params
-      params.require(:book).permit(:title, :description, :author)
+      params.require(:book).permit(:title, :description, :author, :category_id)
     end
 
     def find_book
