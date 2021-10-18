@@ -4,6 +4,5 @@
   <%= f.input :description, label: "Description" %>
   <%= f.label "Category" %>
   <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, { prompt: "Choose category" } %>
-  <%# select_tag(:category_id, options_for_select(@categories), prompt: "Choose category") %> <br><br>
   <%= f.button :submit %>
 <% end %>
