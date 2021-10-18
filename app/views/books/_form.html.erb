@@ -1,9 +1,9 @@
-<%= simple_form_for @book do |f| %> 
+<%= simple_form_for @book do |f| %>
   <%= f.input :title, label: "Title" %>
   <%= f.input :author, label: "Author" %>
   <%= f.input :description, label: "Description" %>
   <%= f.label "Category" %>
-  <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, { prompt: "Choose category" } %> 
+  <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, { prompt: "Choose category" } %>
   <%# select_tag(:category_id, options_for_select(@categories), prompt: "Choose category") %> <br><br>
   <%= f.button :submit %>
 <% end %>
