@@ -17,9 +17,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'simple_form', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.8'
+gem 'paperclip', '~> 6.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 2.19'
 end
 
 group :development do
