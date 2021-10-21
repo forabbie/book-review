@@ -36,3 +36,4 @@ yarn-debug.log*
 .yarn-integrity
 
 /public/system/books
+/app/assets/images

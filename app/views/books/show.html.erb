@@ -6,8 +6,18 @@
   <div class="col-md-8">
     <h2><%= @book.title %></h2>
     <h3><%= @book.author %></h3>
-    <h4>Category: <%= @book.category.name %></h4>
+    <h4 class="avg-rating">Average Rating: <span class="avg-rating"><%= @average_review %></span> </h4>
+    <h5>Based on <%= @book.reviews.count %> reviews</h5>
     <p><%= @book.description %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <%= render @book.reviews %>
+    <div>
+      <%= link_to 'Add Review', new_book_review_path(@book) %>
+    </div>
   </div>
 </div>
 
